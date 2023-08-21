@@ -1,14 +1,30 @@
 [tool.poetry]
 name = "deepler"
 version = "0.1.0"
-description = ""
+description = "deepler is a learning support tool that records the number of words that appear through DeepL. You can learn frequently used words efficiently."
 authors = ["rhoboro <rhoboro@gmail.com>"]
+license = "MIT"
 readme = "README.md"
+repository = "https://github.com/rhoboro/deepler"
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Education",
+    "Topic :: Education",
+    "Environment :: Console",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+]
 
 [tool.poetry.dependencies]
-python = "^3.11"
+python = "^3.9"
+deepl = "^1.15.0"
 
 
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+deepler = "deepler.cli:main"
