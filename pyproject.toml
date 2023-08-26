@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "deepler"
-version = "0.1.1"
+version = "0.1.2"
 description = "deepler is a learning support tool that records the number of words that appear through DeepL. You can learn frequently used words efficiently."
 authors = ["rhoboro <rhoboro@gmail.com>"]
 license = "MIT"

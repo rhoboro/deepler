@@ -47,9 +47,9 @@ def translate(
     result = translator.DeepLTranslator(auth_key).translate(
         text,
         config_file,
-        source_lang,
-        target_lang,
-        count_lang,
+        source_lang.upper(),
+        target_lang.upper(),
+        count_lang.upper(),
         **kwargs,
     )
     print(f"input text({result.source_lang})")

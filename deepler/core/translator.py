@@ -45,7 +45,7 @@ class Translator:
             text=text, source_lang=source_lang, target_lang=target_lang, **options
         )
 
-        if target_lang == count_lang:
+        if target_lang.split("-")[0] == count_lang:
             counts_text = result.result_text
             count_target = CountTarget.result_text
         else:
