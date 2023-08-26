@@ -26,11 +26,20 @@ def translate(
         source_lang = config.source_lang
     if not target_lang:
         target_lang = config.target_lang
+
     if not count_lang:
         count_lang = config.count_lang
 
     if swap:
         source_lang, target_lang = target_lang, source_lang
+
+    if "-" in source_lang:
+        source_lang = source_lang.split("-")[0]
+
+    if target_lang.upper() == "EN":
+        target_lang = "EN-US"
+    elif target_lang.upper() == "PT":
+        target_lang = "PT-PT"
 
     if text == "-":
         text = sys.stdin.read()
